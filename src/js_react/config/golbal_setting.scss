@@ -1,0 +1,42 @@
+/* =RWD Setting */
+$phone: 'screen and (max-width: 485px)' !default;
+$sm-485px: 'screen and (min-width: 485px)' !default;
+$md-785px: 'screen and (min-width: 785px)' !default;
+$md-1000px: 'screen and (min-width: 1000px)' !default;
+$lg-1200px: 'screen and (min-width: 1200px)' !default;
+$lg-1500px: 'screen and (min-width: 1500px)' !default;
+@mixin media($query:$phone){
+  @media #{$query}{@content};
+}
+
+/* =Variable Setting */
+$color-main:#eb8667 !default;//#e99d86 //#e78061
+$color-brown:#a54b4b !default;
+$font-family-main:'Microsoft JhengHei' !default;
+$text-color-main:#eeeeee !default;
+$text-color-hover:#695555 !default;
+
+/* =Golbal Setting */
+*{
+  padding: 0px 0px;
+  margin: 0px 0px;
+  box-sizing: border-box;
+}
+body {
+  width: 100%;
+  height: auto;
+  background-color: #eeeeee;
+  background-image: url(http://localhost:3000/static/background__ep_naturalwhite.png);
+  font-family: $font-family-main;
+}
+#root {overflow-x: hidden;}
+a {text-decoration: none;}
+a:hover {cursor: pointer;}
+button:hover {cursor: pointer;}
+
+@include media($lg-1200px){
+  body {
+    width: calc(100% - 20px);
+    margin: 10px 10px;
+  }
+}
