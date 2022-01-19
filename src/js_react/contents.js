@@ -17,40 +17,34 @@ import Main_StoryBox from './component/main/main_storyBox/main_storyBox.js';
 import Main_DisplayBox from './component/main/main_displayBox/main_displayBox.js';
 import './contents.scss';
 
-
-class Root__Contents extends React.Component{
-  constructor(props){
-    super(props);
-  }
-  render(){
-    return (
-      <>
-        <Nav/>
-        <Header/>
-        <BrowserRouter>
-          <Routes>
-            <Route path="contents/">
-              <Route index element={<Main_Sample/>}>
-              </Route>
-              <Route path="login" element={<Main_Login/>} />
-              <Route path="register" element={<Main_Register/>} />
-              <Route path="resend" element={<Main_Resend/>} />
-              <Route path="forgot" element={<Main_Forgot/>} />
-              <Route path="forgot_password" element={<Main_ForgotPassword/>}>
-              </Route>
-              <Route path="center" element={<Main_UserCenter/>} />
-              <Route path="message_page" element={<Main_MessagePage/>} />
-              <Route path="story" element={<Main_StoryBox/>} />
-              <Route path="sample" element={<Main_Sample/>} />
-              <Route path="sample_products" element={<Main_DisplayBox/>} />
+function Root__Contents(){
+  return (
+    <>
+      <Nav/>
+      <Header/>
+      <BrowserRouter>
+        <Routes>
+          <Route path="contents/">
+            <Route index element={<Main_Sample/>}>
             </Route>
-          </Routes>
-        </BrowserRouter>
-        <Aside/>
-        <Footer/>
-      </>
-    )
-  }
+            <Route path="login" element={<Main_Login/>} />
+            <Route path="register" element={<Main_Register/>} />
+            <Route path="resend" element={<Main_Resend/>} />
+            <Route path="forgot" element={<Main_Forgot/>} />
+            <Route path="forgot_password" element={<Main_ForgotPassword/>}>
+            </Route>
+            <Route path="center" element={<Main_UserCenter/>} />
+            <Route path="message_page" element={<Main_MessagePage/>} />
+            <Route path="story" element={<Main_StoryBox/>} />
+            <Route path="sample" element={<Main_Sample/>} />
+            <Route path="sample_products" element={<Main_DisplayBox/>} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
+      <Aside/>
+      <Footer/>
+    </>
+  )
 }
 
 ReactDOM.render(<Root__Contents/>, document.getElementById("root"));
