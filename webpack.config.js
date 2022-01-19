@@ -6,7 +6,7 @@ module.exports={
   devtool: 'source-map',
   entry: {
     index: { import: './src/js_react/index.js', filename: 'index.js'},
-    //contents: { import: './src/js_react/contents.js', filename: 'contents.js'},
+    contents: { import: './src/js_react/contents.js', filename: 'contents.js'},
   },
   output: {
     path: path.resolve(__dirname, 'build/'),

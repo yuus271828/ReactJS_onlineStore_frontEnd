@@ -1,0 +1,143 @@
+/* =MAIN */
+.main_register {
+  width: 100%;
+  height: auto;
+  margin: 90px 0px 20px;
+  a {color: #555555;}
+  a:hover {color: #000000;}
+}
+.main_register__Box {
+  width: 90vw;
+  height: auto;
+  margin: 0px auto;
+  background-color: #ffffff;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-content: flex-start;
+}
+/* =TITLE */
+.main_register__BoxTitle {
+  width: 100%;
+  height: 70px;
+  padding: 0px 40px;
+  line-height: 100px;
+  font-weight: bold;
+  font-size: 18px;
+  letter-spacing: 2px;
+}
+/* =FORM */
+.main_register__BoxForm {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-content: flex-start;
+}
+.main_register__Form {
+  width: 100%;
+  height: 60px;
+  margin: 10px 0px;
+  padding: 0px 30px 0px;
+  text-align: center;
+  line-height: 30px;
+  color: #333333;
+  font-weight: bold;
+  font-size: 14px;
+  letter-spacing: 2px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  div {display: none;}
+  input {
+    width: 100%;
+    padding: 0px 8px;
+    border: thin solid #ffffff;
+    border-bottom-color: #cccccc;
+    border-radius: 2px;
+    font-size: 15px;
+    transition: all 200ms ease-out;
+  }
+  input:focus, input:hover {
+    outline: none;
+    border-bottom-color: #333333;
+  }
+  input::placeholder {color: #aaaaaa}
+}
+.main_register__FormTitle {
+  margin: 0px 0px 0px 20px;
+}
+.main_register__Messages {
+  justify-content: space-between;
+  color:#cc0505;
+  font-size: 15px;
+}
+.main_register__FormSubmit {
+  width: 100%;
+  height: 50px;
+  margin: 10px 30px;
+  border-radius: 8px;
+  background-color: $color-main;
+  border: solid 1px $color-main;
+  color: #ffffff;
+  text-align: center;
+  line-height: 50px;
+  font-size: 16px;
+  transition: all 300ms ease-out;
+  &:hover {
+    background-color: $color-brown;
+    border: solid 1px $color-brown;
+    color: #ffffff;
+    }
+}
+/* =LINK */
+.main_register__BoxExternal {
+  width: 100%;
+  height: 60px;
+  margin: 10px;
+  border-radius: 8px;
+  background-color: #dddddd;
+  box-shadow: 0px 0px 0px 0.5px #cccccc;
+  text-align: center;
+  line-height: 60px;
+  font-size: 15px;
+  transition: all 300ms ease-out;
+  &:hover {
+    background-color: #cccccc;
+  }
+}
+/* =MEDIA $sm-485px */
+@include media($sm-485px) {
+  .main_register__Box {width: 380px;}
+  .main_register__BoxTitle {
+    height: 100px;
+    text-align: center;
+  }
+  .main_register__Form {
+    height: 30px;
+    padding: 0px 50px 0px 0px;
+    div {display: inline-block;}
+    input {
+      width: 220px;
+      border: thin solid #cccccc;
+    }
+    input:focus, input:hover {border-color: #333333;}
+  }
+  .main_register__Messages {padding: 0px 50px 0px;}
+  .main_register__FormSubmit {margin: 30px 50px 10px;}
+  .main_register__BoxExternal {width: 100%;}
+}
+/* =MEDIA $md-785px */
+@include media($md-785px) {
+  .main_register {margin: 70px 0px 20px;}
+}
+/* =MEDIA $md-1000px */
+@include media($md-1000px) {
+}
+/* =MEDIA $lg-1200px */
+@include media($lg-1200px) {
+}
+/* =MEDIA $lg-1500px */
+@include media($lg-1500px) {
+}

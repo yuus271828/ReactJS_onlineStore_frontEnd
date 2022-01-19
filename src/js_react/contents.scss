@@ -1,19 +1,19 @@
-@import "../universal/golbal_setting.scss";
-@import "../universal/nav/nav.scss";
-@import "../universal/header/header.scss";
-@import "../universal/aside/aside.scss";
-@import "../universal/footer/footer.scss";
+@import "./config/golbal_setting.scss";
+@import "./component/nav/nav/nav.scss";
+@import "./component/header/header/header.scss";
+@import "./component/aside/aside.scss";
+@import "./component/footer/footer.scss";
 
-@import "./member__login/member__login.scss";
-@import "./member__register/member__register.scss";
-@import "./member__resend/member__resend.scss";
-@import "./member__forgot/member__forgot.scss";
-@import "./member__forgotPassword/member__forgotPassword.scss";
+@import "./component/main/main_login/main_login.scss";
+@import "./component/main/main_register/main_register.scss";
+@import "./component/main/main_resend/main_resend.scss";
+@import "./component/main/main_forgot/main_forgot.scss";
+@import "./component/main/main_forgotPassword/main_forgotPassword.scss";
 
-@import "./user__center/user__center.scss";
+@import "./component/main/main_userCenter/main_userCenter.scss";
 
-@import "./message__page/message__page.scss";
+@import "./component/main/main_messagePage/main_messagePage.scss";
 
-@import "./story/story.scss";
-@import "./sample/sample.scss";
-@import "./sample__products/sample__products.scss";
+@import "./component/main/main_storyBox/main_storyBox.scss";
+@import "./component/main/main_sample/main_sample.scss";
+@import "./component/main/main_displayBox/main_displayBox.scss";

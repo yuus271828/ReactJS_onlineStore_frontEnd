@@ -1,0 +1,75 @@
+/* =MAIN */
+.main_sample {
+  width: 100%;
+  height: auto;
+  margin: 90px 0px 20px;
+  a {color: #555555;}
+  a:hover {color: #000000;}
+}
+.main_sample__Box {
+  width: 90vw;
+  height: auto;
+  margin: 0px auto;
+  background-color: #ffffff;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-content: flex-start;
+}
+/* =TITLE */
+.main_sample__BoxTitle {
+  width: 100%;
+  height: 70px;
+  padding: 0px 40px;
+  line-height: 100px;
+  font-weight: bold;
+  font-size: 18px;
+  letter-spacing: 2px;
+}
+/* =FORM */
+.main_sample__BoxForm {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-content: flex-start;
+}
+/* =LINK */
+.main_sample__BoxExternal {
+  width: 100%;
+  height: 60px;
+  margin: 10px;
+  border-radius: 8px;
+  background-color: #dddddd;
+  box-shadow: 0px 0px 0px 0.5px #cccccc;
+  text-align: center;
+  line-height: 60px;
+  font-size: 15px;
+  transition: all 300ms ease-out;
+  &:hover {
+    background-color: #cccccc;
+  }
+}
+/* =MEDIA $sm-485px */
+@include media($sm-485px) {
+  .main_sample__Box {width: 380px;}
+  .main_sample__BoxTitle {
+    height: 100px;
+    text-align: center;
+  }
+  .main_sample__BoxExternal {width: 100%;}
+}
+/* =MEDIA $md-785px */
+@include media($md-785px) {
+  .main_sample {margin: 70px 0px 20px;}
+}
+/* =MEDIA $md-1000px */
+@include media($md-1000px) {
+}
+/* =MEDIA $lg-1200px */
+@include media($lg-1200px) {
+}
+/* =MEDIA $lg-1500px */
+@include media($lg-1500px) {
+}

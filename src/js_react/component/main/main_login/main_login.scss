@@ -1,0 +1,174 @@
+/* =MAIN */
+.main_login {
+  width: 100%;
+  height: auto;
+  margin: 90px 0px 20px;
+  a {color: #555555;}
+  a:hover {color: #000000;}
+}
+.main_loginBox {
+  width: 90vw;
+  height: auto;
+  margin: 0px auto;
+  background-color: #ffffff;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-content: flex-start;
+}
+/* =TITLE */
+.main_loginBox__title {
+  width: 100%;
+  height: 70px;
+  padding: 0px 40px;
+  line-height: 100px;
+  font-weight: bold;
+  font-size: 18px;
+  letter-spacing: 2px;
+}
+/* =FORM */
+.main_loginBox__form {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-content: flex-start;
+}
+.main_loginForm {
+  width: 100%;
+  height: 30px;
+  margin: 10px 0px;
+  padding: 0px 30px 0px;
+  text-align: center;
+  line-height: 30px;
+  color: #333333;
+  font-weight: bold;
+  font-size: 14px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+  div {display: none;}
+  input {
+    width: 100%;
+    padding: 0px 8px;
+    border: thin solid #ffffff;
+    border-bottom-color: #cccccc;
+    border-radius: 2px;
+    font-size: 15px;
+    transition: all 200ms ease-out;
+  }
+  input:focus, input:hover {
+    outline: none;
+    border-bottom-color: #333333;
+  }
+  input::placeholder {color: #aaaaaa}
+}
+.main_loginForm__input {
+  height: 60px;
+  letter-spacing: 16px;
+}
+.main_loginForm__CAPTCHA {
+  height: 60px;
+  input {width: calc(100% - 110px);}
+  img {
+    width: 100px;
+    height: 30px;
+    margin: auto 0px auto 10px;
+    background-color: cadetblue;
+  }
+}
+.main_loginForm__messages {
+  justify-content: space-between;
+  color:#cc0505;
+  font-size: 15px;
+}
+.main_loginForm__others {
+  margin: 0px 0px;
+  justify-content: space-between;
+  font-size: 13px;
+}
+.main_loginForm__login {
+  width: 100%;
+  height: 50px;
+  margin: 10px 30px;
+  border-radius: 8px;
+  background-color: $color-main;
+  border: solid 1px $color-main;
+  color: #ffffff;
+  text-align: center;
+  line-height: 50px;
+  font-size: 16px;
+  transition: all 300ms ease-out;
+}
+.main_loginForm__login:hover {
+  background-color: $color-brown;
+  border: solid 1px $color-brown;
+  color: #ffffff;
+}
+/* =LINK */
+.main_loginBox__external {
+  width: 50%;
+  height: 60px;
+  text-align: center;
+  line-height: 60px;
+  font-size: 15px;
+}
+.main_loginBox__bottom {
+  width: 100%;
+  height: 60px;
+  margin: 10px;
+  border-radius: 8px;
+  background-color: #dddddd;
+  box-shadow: 0px 0px 0px 0.5px #cccccc;
+  text-align: center;
+  line-height: 60px;
+  font-weight: bolder;
+  font-size: 16px;
+  span {color: $color-main;}
+  transition: all 300ms ease-out;
+  &:hover {
+    background-color: #cccccc;
+  }
+}
+.main_loginBox__bottom--end {box-shadow: 0px -1px 0px -0.5px #cccccc;}
+/* =MEDIA $sm-485px */
+@include media($sm-485px) {
+  .main_loginBox {width: 380px;}
+  .main_loginBox__title {
+    height: 100px;
+    text-align: center;
+  }
+  .main_loginForm {
+    height: 30px;
+    padding: 0px 50px 0px 0px;
+    div {display: inline-block;}
+    input {
+      width: 220px;
+      border: thin solid #cccccc;
+    }
+    input:focus, input:hover {border-color: #333333;}
+  }
+  .main_loginForm__CAPTCHA {
+    div {margin: 0px 16px;}
+    input {width: 110px;}
+    input::placeholder {color: #ffffff}
+  }
+  .main_loginForm__messages {padding: 0px 50px 0px;}
+  .main_loginForm__others {padding: 0px 50px 0px;}
+  .main_loginForm__login {margin: 30px 50px 10px;}
+  .main_loginBox__external {width: 100%;}
+}
+/* =MEDIA $md-785px */
+@include media($md-785px) {
+  .main_login {margin: 70px 0px 20px;}
+}
+/* =MEDIA $md-1000px */
+@include media($md-1000px) {
+}
+/* =MEDIA $lg-1200px */
+@include media($lg-1200px) {
+}
+/* =MEDIA $lg-1500px */
+@include media($lg-1500px) {
+}
