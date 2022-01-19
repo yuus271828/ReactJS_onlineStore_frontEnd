@@ -5,8 +5,8 @@ module.exports={
   mode: 'development',
   devtool: 'source-map',
   entry: {
-    index: { import: './src/react/index/index.js', filename: 'index.js'},
-    contents: { import: './src/react/contents/contents.js', filename: 'contents.js'},
+    index: { import: './src/js_react/index/index.js', filename: 'index.js'},
+    contents: { import: './src/js_react/contents/contents.js', filename: 'contents.js'},
   },
   output: {
     path: path.resolve(__dirname, 'build/'),
