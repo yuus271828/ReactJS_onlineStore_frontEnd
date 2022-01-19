@@ -1,0 +1,158 @@
+/* =MAIN */
+.center__main {
+  width: 100%;
+  height: auto;
+  margin: 90px 0px 20px;
+  a {color: #555555;}
+  a:hover {color: #000000;}
+}
+.center__main__centerBox {
+  width: 90vw;
+  height: auto;
+  margin: 0px auto;
+  background-color: #ffffff;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-content: flex-start;
+}
+/* =TITLE */
+.center__centerBox__title {
+  width: 100%;
+  height: 70px;
+  padding: 0px 40px;
+  line-height: 100px;
+  font-weight: bold;
+  font-size: 18px;
+  letter-spacing: 2px;
+}
+/* =FORM */
+.center__centerBox__form {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-content: flex-start;
+}
+.center__centerForm {
+  width: 100%;
+  height: 60px;
+  margin: 10px 0px;
+  padding: 0px 30px 0px;
+  text-align: center;
+  line-height: 30px;
+  color: #333333;
+  font-weight: bold;
+  font-size: 14px;
+  letter-spacing: 2px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  div {display: none;}
+  input {
+    width: 100%;
+    padding: 0px 8px;
+    border: thin solid #ffffff;
+    border-bottom-color: #cccccc;
+    border-radius: 2px;
+    font-size: 15px;
+    transition: all 200ms ease-out;
+  }
+  input:focus, input:hover {
+    outline: none;
+    border-bottom-color: #333333;
+  }
+  input::placeholder {color: #aaaaaa}
+}
+.center__centerForm__title {
+  margin: 0px 0px 0px 20px;
+}
+.center__centerForm__messages {
+  justify-content: space-between;
+  color:#cc0505;
+  font-size: 15px;
+}
+.center__centerForm__center {
+  width: 100%;
+  height: 50px;
+  margin: 10px 30px;
+  border-radius: 8px;
+  background-color: $color-main;
+  border: solid 1px $color-main;
+  color: #ffffff;
+  text-align: center;
+  line-height: 50px;
+  font-size: 16px;
+  transition: all 300ms ease-out;
+  &:hover {
+    background-color: $color-brown;
+    border: solid 1px $color-brown;
+    color: #ffffff;
+  }
+}
+.center__centerForm__email {
+  width: 100%;
+  margin: 0px 0px;
+  text-align: center;
+  span {
+    letter-spacing: 1px;
+    font-size: 14px;
+  }
+}
+/* =LINK */
+.center__centerBox__external {
+  width: 100%;
+  height: 60px;
+  margin: 10px;
+  border-radius: 8px;
+  background-color: #dddddd;
+  box-shadow: 0px 0px 0px 0.5px #cccccc;
+  text-align: center;
+  line-height: 60px;
+  font-size: 15px;
+  transition: all 300ms ease-out;
+  &:hover {
+    background-color: #cccccc;
+  }
+}
+/* =MEDIA $sm-485px */
+@include media($sm-485px) {
+  .center__main__centerBox {width: 380px;}
+  .center__centerBox__title {
+    height: 70px;
+    text-align: center;
+  }
+  .center__centerForm {
+    height: 30px;
+    padding: 0px 50px 0px 0px;
+    div {display: inline-block;}
+    input {
+      width: 220px;
+      border: thin solid #cccccc;
+    }
+    input:focus, input:hover {border-color: #333333;}
+  }
+  .center__centerForm__CAPTCHA {
+    div {margin: 0px 16px;}
+    input {width: 110px;}
+    input::placeholder {color: #ffffff}
+  }
+  .center__centerForm__messages {padding: 0px 50px 0px;}
+  .center__centerForm__center {margin: 30px 50px 10px;}
+  .center__centerForm__email {margin: 0px 0px 30px;}
+  .center__centerBox__external {width: 100%;}
+}
+/* =MEDIA $md-785px */
+@include media($md-785px) {
+  .center__main {margin: 70px 0px 20px;}
+}
+/* =MEDIA $md-1000px */
+@include media($md-1000px) {
+}
+/* =MEDIA $lg-1200px */
+@include media($lg-1200px) {
+}
+/* =MEDIA $lg-1500px */
+@include media($lg-1500px) {
+}

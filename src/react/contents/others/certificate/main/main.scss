@@ -1,0 +1,21 @@
+/* =MAIN */
+.main {
+  width: 100%;
+  height: auto;
+  margin: 90px 0px 20px;
+}
+/* =MEDIA $sm-485px */
+@include media($sm-485px) {
+}
+/* =MEDIA $md-785px */
+@include media($md-785px) {
+}
+/* =MEDIA $md-1000px */
+@include media($md-1000px) {
+}
+/* =MEDIA $lg-1200px */
+@include media($lg-1200px) {
+}
+/* =MEDIA $lg-1500px */
+@include media($lg-1500px) {
+}

@@ -1,0 +1,61 @@
+/* =ASIDE */
+.aside {
+  width: auto;
+  height: 100%;
+  position: fixed; right: 0px; top: 0px;
+  z-index: 30;
+  a {color: #ffffff;text-decoration: none;}
+  a:hover {color: #ffffff;}
+}
+.asideTool {
+  width: 50px;
+  height: 160px;
+  position: absolute; right: 0px; top: 60%;
+  background-color: $color-brown;
+  writing-mode: vertical-rl;
+  text-align: center;
+  line-height: 50px;
+  font-size: 16px;
+  color: $text-color-main;
+  letter-spacing: 6px;
+  display: none;
+
+}
+.asideTool--line{
+  width: 50px;
+  height: 50px;
+  position: absolute; right: 0px; top: 79%;
+  writing-mode: horizontal-tb;
+  font-size: 12px;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+.asideTool--top{
+  width: 33px;
+  height: 33px;
+  padding: 1px 0px 0px 2px;
+  position: absolute; right: 5px; top: auto; bottom: 10px;
+  writing-mode: horizontal-tb;
+  border-radius: 50%;
+  line-height: 30px;
+  font-size: 24px;
+  letter-spacing: 2px;
+  font-weight: bolder;
+  display:inline-block;
+}
+/* =MEDIA $sm-485px */
+@include media($sm-485px) {
+  .asideTool {display: inline-block;}
+}
+/* =MEDIA $md-785px */
+@include media($md-785px) {
+}
+/* =MEDIA $md-1000px */
+@include media($md-1000px) {
+}
+/* =MEDIA $lg-1200px */
+@include media($lg-1200px) {
+}
+/* =MEDIA $lg-1500px */
+@include media($lg-1500px) {
+}

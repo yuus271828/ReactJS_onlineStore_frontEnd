@@ -1,0 +1,217 @@
+/* =SAMPLEPRODUCTS__MAIN */
+.sampleProducts__main {
+  width: 93vw;
+  height: auto;
+  margin: 0px auto 40px;
+  display: flex;
+  flex-flow: row wrap;
+}
+/* =TITLE */
+.sampleProducts__mainTitle {
+  width: 100%;
+  height: auto;
+  margin: 30px 0px;
+  text-align: center;
+  font-size: 40px;
+}
+/* =BOX__LARGE */
+.sampleProducts__mainBox {
+  width: 100%;
+  height: 120vw;
+  margin: 10px 10px;
+  position: relative;
+  font-weight: bold;
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+.sampleProducts__mainBox:hover .sampleProduct__link {
+  position: absolute; bottom: 20px;
+}
+.sampleProduct {
+  width: 100px;
+  height: 300px;
+  position: absolute; top: 0px; right: 0px;
+  background-color: $color-main; 
+  opacity: 0.75;
+  color: #ffffff;
+  overflow: hidden;
+
+  &__keyWord {
+    width: 60px;
+    height: 60px;
+    position: absolute; top: 15px; right: 50%;
+    transform: translate(50%);
+    border: 3px solid #eeeeee;
+    border-radius: 50%;
+    font-size: 36px;
+    font-weight: border;
+    line-height: 50px;
+    text-align: center;
+    display: none;
+  }
+  &__name {
+    width: auto;
+    height: auto;
+    position: absolute; top: 30px; right: 50%;
+    transform: translate(50%);
+    writing-mode: vertical-rl;
+    line-height: 40px;
+    font-size: 20px;
+    letter-spacing: 4px;
+  }
+  &__link {
+    width: 60px;
+    height: 25px;
+    position: absolute; bottom: 20px; right: 50%;
+    transform: translate(50%);
+    border: 1px solid #eeeeee;
+    font-size: 12px;
+    line-height: 25px;
+    text-align: center;
+    color: #ffffff;
+    text-decoration: none;
+    transition: all 300ms ease-out;
+  }
+  &__link:hover {
+    background-color: #ffffff;
+    color: $color-main;
+  }
+}
+/* =CONTAINER */
+.sampleProducts__mainContainer {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-flow: row wrap;
+}
+/* =BOX__MIDDLE */
+.displayBox--middle {
+  width: 100%;
+  height: 60vw;
+
+  .sampleProduct {
+    height: 100%;
+    position: absolute; top: 0px; right: 0px;
+
+    &__name {
+      font-size: 20px;
+    }
+  }
+}
+/* =BOX__SMALL */
+.displayBox--small {
+  width: 100%;
+  height: 60vw;
+
+  .sampleProduct {
+    width: 100%;
+    height: 100px;
+    position: absolute; top: auto; bottom: 0px; right: 0px;
+    background-color: #333333;
+
+    &__keyWord {
+      position: absolute; top: 50%; right: auto; left: 15px;
+      transform: translate(0%, -50%);
+    }
+    &__name {
+      position: absolute; top: 0px; right: 20px;
+      transform: translate(0%);
+      writing-mode: horizontal-tb;
+      line-height: 40px;
+      font-size: 20px;
+      letter-spacing: 4px;
+      text-align: center;
+    }
+    &__link {
+      position: absolute; bottom: 20px; right: 20px;
+      transform: translate(0%);
+    }
+  }
+}
+/* =MEDIA $sm-485px */
+@include media($sm-485px) {
+  .sampleProducts__mainBox {
+    height: 50vw;
+  }
+  .sampleProduct{
+    height: calc(100% - 60px);
+    position: absolute; top: 20px; right: 20px;
+  }
+  .displayBox--middle {
+    width: calc((93vw - 40px) / 2 );
+    height: 30vw;
+  }
+  .displayBox--small {
+    width: calc((93vw - 60px) / 3);
+    height: calc((93vw - 60px) / 3);
+  }
+}
+/* =MEDIA $md-785px */
+@include media($md-785px) {
+  .sampleProducts__mainTitle {
+    font-size: 44px;
+  }
+  .sampleProduct{
+    height: 300px;
+  }
+}
+/* =MEDIA $md-1000px */
+@include media($md-1000px) {
+  .sampleProducts__mainBox {
+    width: calc((93vw - 60px) / 3 );
+    height: calc(20vw + 20px + (93vw / 3 * 2 - 60px) / 3);
+  }
+  .sampleProduct{
+    width: 110px;
+  }
+  .sampleProducts__mainContainer {
+    width: calc(93vw / 3 * 2);
+    height: auto;
+  }
+  .displayBox--middle {
+    width: calc((93vw - 60px) / 3);
+    height: 20vw;
+  }
+  .displayBox--small {
+    width: calc((93vw / 3 * 2 - 60px) / 3);
+    height: calc((93vw / 3 * 2 - 60px) / 3);
+  }
+}
+/* =MEDIA $lg-1200px */
+@include media($lg-1200px) {
+  .sampleProduct {
+    &__keyWord {
+      display:inline;
+    }
+    &__name {
+      position: absolute; top: 80px;
+    }
+    &__link {
+      position: absolute; bottom: -50px;
+    }
+  }
+  .displayBox--small {
+    .sampleProduct {
+      &__link {
+        position: absolute; bottom: -50px;
+      }
+    }
+  }
+}
+/* =MEDIA $lg-1500px */
+@include media($lg-1500px) {
+  .displayBox--middle {
+    .sampleProduct {
+      height: calc(100% - 40px);
+      position: absolute; top: 20px; right: 20px;
+    }
+  }
+  .displayBox--small {
+    .sampleProduct {
+      width: calc(100% - 20px);
+      position: absolute; bottom: 10px; right: 10px;
+    }
+  }
+}

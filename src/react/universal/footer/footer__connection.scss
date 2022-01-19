@@ -1,0 +1,118 @@
+/* =FOOTER__CONNECTION */
+.footer__connection {
+  width: 90vw; max-width: 1200px;
+  height: auto;
+  margin: 20px auto 0px;
+  position: relative;
+  display: flex;
+  flex-flow: row wrap;
+}
+/* =IMAGE */
+.footer__connectionIcon {
+  width: 200px;
+  height: 200px;
+  margin: 30px auto 0px;
+}
+/* =TEXT */
+.footer__connectionDetails {
+  width: 100%;
+  height: auto;
+  margin: auto 0px;
+  font-size: 14px;
+  letter-spacing: 1px;
+  line-height: 22px;
+  text-align: center;
+  vertical-align: baseline;
+}
+.connectionTitle {
+  margin: 15px 0px;
+  font-size: 24px;
+  letter-spacing: 4px;
+  line-height: 28px;
+  font-weight: bolder;
+}
+/* =EXETERNA */
+.footer__connectionExternal{
+  width: 100%;
+  height: calc(45vw + 100px); max-height: 325px;
+  position: relative;
+}
+.connectionMap {
+  width: 90vw; max-width: 450px;
+  height: 45vw; max-height: 225px;
+  margin: 20px auto;
+  position: absolute; left: 50%;
+  transform: translate(-50%);
+}
+.connectionLink {
+  width: 100%;
+  height: 60px;
+  position: absolute; bottom: 0px;
+  
+
+  a {
+    width: 50px;
+    height: 50px;
+    margin: 10px 0px 10px 30px;
+    img {
+      width:50px;
+      height: 50px;
+    }
+  }
+}
+/* =MEDIA $sm-485px */
+@include media($sm-485px) {
+  .footer__connectionIcon {
+    margin: 30px 10px 0px calc(45vw - 225px);
+  }
+  .footer__connectionDetails {
+    width: 40vw;
+    height: auto;
+    text-align: left;
+  }
+  .connectionLink {
+    margin: 0px 0px 0px calc(45vw - 225px);
+    .download {display: none;}
+  }
+}
+/* =MEDIA $md-785px */
+@include media($md-785px) {
+}
+/* =MEDIA $md-1000px */
+@include media($md-1000px) {
+  .footer__connectionIcon {
+    width: 250px;
+    height: 250px;
+    margin: 30px 10px 0px;
+  }
+  .footer__connectionDetails {
+    width: auto;
+    height: auto;
+    margin: 40px auto 0px 10px;
+    font-size: 16px;
+    letter-spacing: 1px;
+    line-height: 24px;
+  }
+  .connectionTitle {
+    margin: 20px 0px;
+    font-size: 28px;
+    letter-spacing: 6px;
+    line-height: 32px;
+  }
+  .footer__connectionExternal{
+    width: 33vw; max-width: 450px;
+  }
+  .connectionMap {
+    width: 33vw;
+    height: 20vw; max-height: 200px;
+  }
+  .connectionLink {
+    margin: 0px 0px 20px;
+  }
+}
+/* =MEDIA $lg-1200px */
+@include media($lg-1200px) {
+}
+/* =MEDIA $lg-1500px */
+@include media($lg-1500px) {
+}

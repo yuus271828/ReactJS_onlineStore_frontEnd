@@ -1,0 +1,42 @@
+/* =TITLE__BOX */
+.productBox__titleBox {
+  width: 100%;
+  height: auto;
+}
+/* =INDEX */
+.titleBox__index {
+  width: 100%;
+  height: auto;
+  margin: 5px 0px;
+  padding: 0px 10px;
+  font-size: 14px;
+  display: flex;
+  flex-flow: row nowrap;
+  a {color: #000000;}
+  a:hover {color: #aaaaaa;}
+}
+/* =NAME */
+.titleBox__name {
+  width: 100%;
+  height: auto;
+  margin: 5px 0px;
+  padding: 0px 10px;
+  font-weight: bold;
+  font-size: 17px;
+  letter-spacing: 2px;
+}
+/* =MEDIA $sm-485px */
+@include media($sm-485px) {
+}
+/* =MEDIA $md-785px */
+@include media($md-785px) {
+}
+/* =MEDIA $md-1000px */
+@include media($md-1000px) {
+}
+/* =MEDIA $lg-1200px */
+@include media($lg-1200px) {
+}
+/* =MEDIA $lg-1500px */
+@include media($lg-1500px) {
+}
