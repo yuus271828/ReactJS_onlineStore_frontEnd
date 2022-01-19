@@ -84,7 +84,6 @@
 }
 /* =MEDIA $sm-485px */
 @include media($sm-485px) {
-  .aside {display: inline;}
 }
 /* =MEDIA $md-785px */
 @include media($md-785px) {
