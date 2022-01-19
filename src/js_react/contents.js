@@ -25,14 +25,12 @@ function Root__Contents(){
       <BrowserRouter>
         <Routes>
           <Route path="contents/">
-            <Route index element={<Main_Sample/>}>
-            </Route>
+            <Route index element={<Main_Sample/>} />
             <Route path="login" element={<Main_Login/>} />
             <Route path="register" element={<Main_Register/>} />
             <Route path="resend" element={<Main_Resend/>} />
             <Route path="forgot" element={<Main_Forgot/>} />
-            <Route path="forgot_password" element={<Main_ForgotPassword/>}>
-            </Route>
+            <Route path="forgot_password" element={<Main_ForgotPassword/>} />
             <Route path="center" element={<Main_UserCenter/>} />
             <Route path="message_page" element={<Main_MessagePage/>} />
             <Route path="story" element={<Main_StoryBox/>} />
