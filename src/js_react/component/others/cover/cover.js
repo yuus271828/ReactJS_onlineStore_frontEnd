@@ -23,10 +23,6 @@ export default function Cover() {
     return () => cancelAnimationFrame(timer);
   },[])
 
-  //componentDidMount(){this.cover__fadeOut();}
-  //componentWillUnmount(){cancelAnimationFrame(this.timer);}
-  //render() {
-    //document.body.style.overflowY = 'hidden';
   return (
     <>
       <div className='cover'>

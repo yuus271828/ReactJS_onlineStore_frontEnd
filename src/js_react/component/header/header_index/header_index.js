@@ -23,8 +23,7 @@ export default function Header_Index() {
     headerText__fadeIn();
     return () => cancelAnimationFrame(timer);
   },[])
-  //componentDidMount(){this.headerText__fadeIn();}
-  //componentWillUnmount(){cancelAnimationFrame(this.timer);}
+  
   return (
     <header className='header_index'>
       <picture>

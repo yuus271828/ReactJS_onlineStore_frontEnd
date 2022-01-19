@@ -16,14 +16,6 @@ export default function Nav_Index() {
     window.addEventListener('scroll', nav__scrollHandler)
     return () => window.removeEventListener('scroll', nav__scrollHandler)
   },[scrollTop])
-  /*
-  componentDidMount(){
-    window.addEventListener('scroll', e => {this.nav__scrollHandler(e)}, true) 
-  }
-  componentWillUnmount(){
-    window.removeEventListener('scroll', e => {this.nav__scrollHandler(e)}, true)
-  }
-  */
 
   const asideBox__clickHandler = (e) => {
     let start = Date.now();

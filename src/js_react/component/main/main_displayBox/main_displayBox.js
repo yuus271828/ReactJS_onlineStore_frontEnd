@@ -14,7 +14,6 @@ export default function Main_DisplayBox() {
           </div>
           <a className='main__displayProduct__link' >MORE</a>
         </div>
-        {/* 400*541/826*455/465*636 */}
         <picture>
         <source media='(min-width: 1000px)' srcSet='/static/main_displayBox_1_1000px.jpg'/>
           <source media='(min-width: 480px)' srcSet='/static/main_displayBox_1_480px.jpg'/>
@@ -32,7 +31,6 @@ export default function Main_DisplayBox() {
             </div>
             <a className='main__displayProduct__link' >MORE</a>
           </div>
-          {/* 400*271/465*313/465*313 */}
           <picture>
             <source media='(min-width: 480px)' srcSet='/static/main_displayBox_2_480px.jpg'/>
             <img src='/static/main_displayBox_2.jpg' alt='烏魚子禮盒'/>
@@ -60,7 +58,6 @@ export default function Main_DisplayBox() {
             </div>
             <a className='main__displayProduct__link' >MORE</a>
           </div>
-          {/* 400*271/200*200/200*200 */}
           <picture>
             <source media='(min-width: 480px)' srcSet='/static/main_displayBox_4_480px.jpg'/>
             <img src='/static/main_displayBox_4.jpg' alt='烏魚子一口吃'/>
