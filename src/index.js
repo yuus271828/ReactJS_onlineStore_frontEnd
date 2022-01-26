@@ -10,21 +10,20 @@ import Aside from './component/aside/aside.js';
 import Footer from './component/footer/footer.js';
 import './index.scss';
 
-function Root__Index() {
-  return (
-    <>
-      <Nav_Index/>
-      <Header_Index/>
-      <div className='main_index'>
-        <Main_DisplayBox/>
-        <Main_SaleBox/>
-        <Main_StoryBox/>
-      </div>
-      <Aside/>
-      <Footer/>
-    </>
-  )
-}
+ReactDOM.render(
+  <Cover/>,
+  document.getElementById("root__cover")
+);
 
-ReactDOM.render(<Cover/>, document.getElementById("root__cover"));
-ReactDOM.render(<Root__Index/>, document.getElementById("root"));
+ReactDOM.render(<>
+  <Nav_Index/>
+  <Header_Index/>
+  <div className='main_index'>
+    <Main_DisplayBox/>
+    <Main_SaleBox/>
+    <Main_StoryBox/>
+  </div>
+  <Aside/>
+  <Footer/>
+  </>,document.getElementById("root")
+);
