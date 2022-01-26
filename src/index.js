@@ -10,12 +10,8 @@ import Aside from './component/aside/aside.js';
 import Footer from './component/footer/footer.js';
 import './index.scss';
 
-ReactDOM.render(
-  <Cover/>,
-  document.getElementById("root__cover")
-);
-
 ReactDOM.render(<>
+  <Cover/>
   <Nav_Index/>
   <Header_Index/>
   <div className='main_index'>
