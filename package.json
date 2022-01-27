@@ -4,17 +4,24 @@
   "private": true,
   "license": "ISC",
   "dependencies": {
+    "@testing-library/jest-dom": "^5.16.1",
+    "@testing-library/react": "^12.1.2",
+    "@testing-library/user-event": "^13.5.0",
     "react": "^17.0.2",
     "react-bootstrap": "^2.0.4",
     "react-dom": "^17.0.2",
     "react-router-dom": "^6.2.1",
-    "reactstrap": "^9.0.1"
+    "react-scripts": "^5.0.0",
+    "reactstrap": "^9.0.1",
+    "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack",
-    "dev": "webpack-dev-server",
-    "start": "start"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "w-build": "webpack",
+    "w-dev": "webpack-dev-server"
   },
   "browserslist": {
     "production": [
