@@ -6,7 +6,6 @@ module.exports={
   devtool: 'source-map',
   entry: {
     index: { import: './src/index.js', filename: 'index.js'},
-    contents: { import: './src/contents.js', filename: 'contents.js'},
   },
   output: {
     path: path.resolve(__dirname, 'dist/'),
@@ -17,11 +16,7 @@ module.exports={
     static: [
       {
         directory: path.join(__dirname, 'dist/'),
-        publicPath: '/',
-      },
-      {
-        directory: path.join(__dirname, 'dist/contents.html'),
-        publicPath: ['/contents', '/contents/*'],
+        publicPath: '/*',
       },
     ],
     proxy: {
