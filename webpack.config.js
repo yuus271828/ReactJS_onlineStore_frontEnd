@@ -19,17 +19,6 @@ module.exports={
         publicPath: '/*',
       },
     ],
-    proxy: {
-      '/api': {
-        target: 'http://localhost:8081',
-        secure: false,
-      },
-    },
-    headers: {
-      'Access-Control-Allow-Origin': '*',
-      'Access-Control-Allow-Headers': '*',
-      'Access-Control-Allow-Methods': '*',
-    },
     open: ['/'],
     compress: true,
     client: {
