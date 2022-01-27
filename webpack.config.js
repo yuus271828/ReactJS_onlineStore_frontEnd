@@ -9,18 +9,18 @@ module.exports={
     contents: { import: './src/contents.js', filename: 'contents.js'},
   },
   output: {
-    path: path.resolve(__dirname, 'build/'),
+    path: path.resolve(__dirname, 'dist/'),
   },
   devServer: {
     host: 'localhost',
     port: 3000,
     static: [
       {
-        directory: path.join(__dirname, 'build/'),
+        directory: path.join(__dirname, 'dist/'),
         publicPath: '/',
       },
       {
-        directory: path.join(__dirname, 'build/contents.html'),
+        directory: path.join(__dirname, 'dist/contents.html'),
         publicPath: ['/contents', '/contents/*'],
       },
     ],
