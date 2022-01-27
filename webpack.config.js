@@ -1,5 +1,5 @@
 const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyPlugin = require("copy-webpack-plugin");
 
 module.exports={
   mode: 'production',
@@ -45,16 +45,11 @@ module.exports={
     },
   },
   plugins: [
-    /*new HtmlWebpackPlugin(
-      {
-      template: './src/resource/templates/index.html',
-      filename: 'index.html',
-      title: '茂洋烏魚子',
-    },{
-      template: './src/resource/templates/contents.html',
-      filename: 'contents.html',
-      title: '茂洋烏魚子',
-    })*/
+    new CopyPlugin({
+      patterns: [
+        { from: "./public" },
+      ],
+    }),
   ],
   module:{
     rules:[
