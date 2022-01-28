@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import Nav__asideBox from './nav__asideBox.js';
-import Nav__rightBox from './nav__rightBox.js';
-import Nav__centerBox from './nav__centerBox.js';
+import NAV__ASIDEBOX from './nav__asideBox.js';
+import NAV__RIGHTBOX from './nav__rightBox.js';
+import NAV__CENTERBOX from './nav__centerBox.js';
 
-export default function Nav() {
+export default function NAV() {
   const [scrollTop, setScrollTop] = useState(0);
   
   useEffect(()=>{
@@ -18,6 +18,7 @@ export default function Nav() {
   },[scrollTop])
 
   const asideBox__clickHandler = (e) => {
+    e.preventDefault();
     let start = Date.now();
     let nav__menu = document.getElementById('nav__menu');
     if (e.target.id === 'nav__rightBoxMenu') {
@@ -44,11 +45,11 @@ export default function Nav() {
           <img className='nav__homeLinkImg' src='/static/logo_tr(w)(100x50).svg' alt='茂洋烏魚子'></img>
         </a>
       </div>
-      <Nav__centerBox 
+      <NAV__CENTERBOX 
         name={['品牌故事', '產品介紹', '料理烏魚子', '會員中心', '會員登入']}
         href={['/contents/story', '/contents/sample_products', '/contents/sample', '/contents/center', '/contents/login']} />
-      <Nav__rightBox click={asideBox__clickHandler} />
-      <Nav__asideBox 
+      <NAV__RIGHTBOX click={asideBox__clickHandler} />
+      <NAV__ASIDEBOX 
         click={asideBox__clickHandler}
         name={['品牌故事', '產品介紹', '料理烏魚子', '常見問題', '檢驗證書', '會員中心', '會員登入']}
         href={['/contents/story', '/contents/sample_products', '/contents/sample', '/contents/sample', '/contents/sample', '/contents/center', '/contents/login']} />

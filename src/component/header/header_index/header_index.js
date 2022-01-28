@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 
-export default function Header_Index() {
+export default function HEADER_INDEX() {
   useEffect(()=>{
     let timer;
     const headerText__fadeIn = () => {

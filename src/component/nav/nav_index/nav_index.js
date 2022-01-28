@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import Nav_Index__asideBox from './nav_index__asideBox.js';
-import Nav_Index__rightBox from './nav_index__rightBox.js';
-import Nav_Index__centerBox from './nav_index__centerBox.js';
+import NAV_INDEX__ASIDEBOX from './nav_index__asideBox.js';
+import NAV_INDEX__RIGHTBOX from './nav_index__rightBox.js';
+import NAV_INDEX__CENTERBOX from './nav_index__centerBox.js';
 
-export default function Nav_Index() {
+export default function NAV_INDEX() {
   const [scrollTop, setScrollTop] = useState(0);
   
   useEffect(()=>{
@@ -18,6 +18,7 @@ export default function Nav_Index() {
   },[scrollTop])
 
   const asideBox__clickHandler = (e) => {
+    e.preventDefault();
     let start = Date.now();
     let nav__menu = document.getElementById('nav_index__menu');
     if (e.target.id === 'nav_index__rightBoxMenu') {
@@ -44,11 +45,11 @@ export default function Nav_Index() {
           <img className='nav_index__homeLinkImg' src='/static/logo_tr(w)(100x50).svg' alt='茂洋烏魚子'></img>
         </a>
       </div>
-      <Nav_Index__centerBox 
+      <NAV_INDEX__CENTERBOX 
         name={['品牌故事', '產品介紹', '料理烏魚子', '會員中心', '會員登入']}
         href={['/contents/story', '/contents/sample_products', '/contents/sample', '/contents/center', '/contents/login']} />
-      <Nav_Index__rightBox click={asideBox__clickHandler} />
-      <Nav_Index__asideBox 
+      <NAV_INDEX__RIGHTBOX click={asideBox__clickHandler} />
+      <NAV_INDEX__ASIDEBOX 
         click={asideBox__clickHandler}
         name={['品牌故事', '產品介紹', '料理烏魚子', '常見問題', '檢驗證書', '會員中心', '會員登入']}
         href={['/contents/story', '/contents/sample_products', '/contents/sample', '/contents/sample', '/contents/sample', '/contents/center', '/contents/login']} />

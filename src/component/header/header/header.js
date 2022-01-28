@@ -1,9 +1,9 @@
 import React from 'react';
 
-export default function Header(){
+export default function HEADER(){
   return (
     <div className='header'>
-      <img className='header__img' src='/static/header.jpg'></img>
+      <img className='header__img' src='/static/header.jpg' alt='茂洋烏魚子'></img>
       <div className='header__titleBox'>
         <div className='headerTitle--first'>茂洋</div>
         <div className='headerTitle--second'>烏魚子</div>

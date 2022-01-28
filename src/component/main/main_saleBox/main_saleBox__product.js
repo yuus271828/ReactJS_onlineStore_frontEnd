@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function Main_SaleBox__Product(props){
+export default function MAIN_SALEBOX__PRODUCT(props){
   return (
     <div className='main_saleBox__product'>
       <picture>

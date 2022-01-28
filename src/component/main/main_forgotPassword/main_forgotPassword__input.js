@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Main_ForgotPassword__Input(props){
+export default function MAIN_FORGOTPASSWORD__INPUT(props){
   return(
     <div className='main_forgotPassword__Form'>
       <div className='main_forgotPassword__FormTitle'>{props.title}</div>

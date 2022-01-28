@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Main_Resend__Input(props){
+export default function MAIN_RESEND__INPUT(props){
   return(
     <div className='main_resend__Form'>
       <div className='main_resend__FormTitle'>{props.title}</div>

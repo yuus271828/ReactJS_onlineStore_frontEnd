@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function Footer__BottomBox(){
+export default function FOOTER__BOTTOM(){
   return (
     <div className='footer__bottom'>
       <div className='footer__bottom__linkBox'>

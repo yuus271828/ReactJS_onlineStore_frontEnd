@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import Main_Resend__Input from "./main_resend__input.js";
-import Main_Resend__Messages from "./main_resend__messages";
+import MAIN_RESEND__INPUT from "./main_resend__input.js";
+import MAIN_RESEND__MESSAGES from "./main_resend__messages";
 import { validEmail } from "../../../config/regex_setting.js";
 
 export default function Main_Resend(){
@@ -42,13 +42,13 @@ export default function Main_Resend(){
       <div className="main_resend__Box">
         <div className='main_resend__BoxTitle'>重發驗證信</div>
         <form className='main_resend__BoxForm' method='post'>
-          <Main_Resend__Input title='電子郵件' type='email' placeholder='請輸入您的e-mail' pattern=''
+          <MAIN_RESEND__INPUT title='電子郵件' type='email' placeholder='請輸入您的e-mail' pattern=''
             value={email}
             change={setEmail}
             />
           {display && 
           <ul className='main_resend__Messages'>
-            {messages.map((message) => <Main_Resend__Messages key={message} message={message} />)}
+            {messages.map((message) => <MAIN_RESEND__MESSAGES key={message} message={message} />)}
           </ul>
           }
           <button className='main_resend__FormSubmit' type='submit'

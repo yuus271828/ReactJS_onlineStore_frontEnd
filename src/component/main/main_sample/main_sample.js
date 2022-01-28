@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Main_Sample() {
+export default function MAIN_SAMPLE() {
   return(
     <div className='main_sample'>
       <div className="main_sample__Box">

@@ -1,6 +1,9 @@
 import React from 'react';
 
-export default function Main_DisplayBox() {
+export default function MAIN_DISPLAYBOX() {
+  const preventJump = (e) => {
+    e.preventDefault();
+  }
   return (
     <div className='main__display'>
       {/* =TITLE */}
@@ -12,7 +15,7 @@ export default function Main_DisplayBox() {
           <div className='main__displayProduct__name'>
             &nbsp;&nbsp;烏魚子<br></br>&nbsp;&nbsp;&nbsp;【禮盒系列】
           </div>
-          <a className='main__displayProduct__link' >MORE</a>
+          <a href='###' onClick={preventJump} className='main__displayProduct__link' >MORE</a>
         </div>
         <picture>
         <source media='(min-width: 1000px)' srcSet='/static/main_displayBox_1_1000px.jpg'/>
@@ -29,7 +32,7 @@ export default function Main_DisplayBox() {
             <div className='main__displayProduct__name'>
               &nbsp;&nbsp;烏魚子<br></br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;禮盒
             </div>
-            <a className='main__displayProduct__link' >MORE</a>
+            <a href='###' onClick={preventJump} className='main__displayProduct__link' >MORE</a>
           </div>
           <picture>
             <source media='(min-width: 480px)' srcSet='/static/main_displayBox_2_480px.jpg'/>
@@ -42,7 +45,7 @@ export default function Main_DisplayBox() {
             <div className='main__displayProduct__name'>
               &nbsp;&nbsp;烏魚子<br></br>&nbsp;&nbsp;&nbsp;&nbsp;一口吃
             </div>
-            <a className='main__displayProduct__link' >MORE</a>
+            <a href='###' onClick={preventJump} className='main__displayProduct__link' >MORE</a>
           </div>
           <picture>
             <source media='(min-width: 480px)' srcSet='/static/main_displayBox_3_480px.jpg'/>
@@ -56,7 +59,7 @@ export default function Main_DisplayBox() {
             <div className='main__displayProduct__name'>
               烏魚子一口吃
             </div>
-            <a className='main__displayProduct__link' >MORE</a>
+            <a href='###' onClick={preventJump} className='main__displayProduct__link' >MORE</a>
           </div>
           <picture>
             <source media='(min-width: 480px)' srcSet='/static/main_displayBox_4_480px.jpg'/>
@@ -69,7 +72,7 @@ export default function Main_DisplayBox() {
             <div className='main__displayProduct__name'>
             烏魚子一口吃
             </div>
-            <a className='main__displayProduct__link' >MORE</a>
+            <a href='###' onClick={preventJump} className='main__displayProduct__link' >MORE</a>
           </div>
           <picture>
             <source media='(min-width: 480px)' srcSet='/static/main_displayBox_5_480px.jpg'/>
@@ -82,7 +85,7 @@ export default function Main_DisplayBox() {
             <div className='main__displayProduct__name'>
             烏魚腱
             </div>
-            <a className='main__displayProduct__link' >MORE</a>
+            <a href='###' onClick={preventJump} className='main__displayProduct__link' >MORE</a>
           </div>
           <picture>
             <source media='(min-width: 480px)' srcSet='/static/main_displayBox_6_480px.jpg'/>

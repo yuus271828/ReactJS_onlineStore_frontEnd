@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import Main_Forgot__Input from "./main_forgot__input.js";
-import Main_Forgot__Messages from "./main_forgot__messages.js";
+import MAIN_FORGOT__INPUT from "./main_forgot__input.js";
+import MAIN_FORGOT__MESSAGES from "./main_forgot__messages.js";
 import { validEmail } from "../../../config/regex_setting.js";
 
-export default function Main_Forgot(){
+export default function MAIN_FORGOT(){
   const [email, setEmail] = useState('');
   const [messages, setMessages] = useState([]);
   const [display, setDisplay] = useState(false);
@@ -42,13 +42,13 @@ export default function Main_Forgot(){
       <div className="main_forgot__Box">
         <div className='main_forgot__BoxTitle'>忘記密碼</div>
         <form className='main_forgot__BoxForm' method='post'>
-          <Main_Forgot__Input title='電子郵件' type='email' placeholder='請輸入您的e-mail'
+          <MAIN_FORGOT__INPUT title='電子郵件' type='email' placeholder='請輸入您的e-mail'
             value={email}
             change={setEmail}
             />
           {display && 
           <ul className='main_forgot__FormMessages'>
-            {messages.map((message) => <Main_Forgot__Messages key={message} message={message} />)}
+            {messages.map((message) => <MAIN_FORGOT__MESSAGES key={message} message={message} />)}
           </ul>
           }
           <button className='main_forgot__FormSubmit' type='submit'

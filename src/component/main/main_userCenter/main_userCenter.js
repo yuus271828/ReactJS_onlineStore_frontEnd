@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import Main_UserCenter__Input from "./main_userCenter__input.js";
-import Main_UserCenter__Messages from "./main_userCenter__messages";
+import MAIN_USERCENTER__INPUT from "./main_userCenter__input.js";
+import MAIN_USERCENTER__MESSAGES from "./main_userCenter__messages";
 import { validName, validPhoneNumber, validAddress } from "../../../config/regex_setting.js";
 
 export default function Main_UserCenter(){
@@ -17,39 +17,38 @@ export default function Main_UserCenter(){
   const [phoneNumber, setPhoneNumber] = useState('');
   const [address, setAddress] = useState('');
 
-
   // 與後端連線，獲取 user 資料，判斷是否為登入狀態
   useEffect(()=>{ 
-      fetch("http://localhost:8081/api/user/getUserInfo",{
-        method:"GET",
-        headers:{
-          'Authorization': 'Bearer ' + localStorage.getItem("JWToken"),
-        },
-      })
-      .then(res=>res.json())
-      .then((res)=>{
-        if(res['error']){
-          // 如果連線失敗，表示未登入
-          setConnected(false);
-          setEmail('尚未登入')
-          return;
-        }
-        // 如果連線成功，就設定 connented, email
-        setConnected(true);
-        setEmail(res['email']);
-        if(!editInfo && res['lastName']){
-          // 如果是 false ，且資料非 null 就取資料然後設定 state
-          setLastName(res['lastName']);
-          setFirstName(res['firstName']);
-          setPhoneNumber(res['phoneNumber']);
-          setAddress(res['address']);
-        };
-      })
-  },[email])
+    fetch("http://localhost:8081/api/user/getUserInfo",{
+      method:"GET",
+      headers:{
+        'Authorization': 'Bearer ' + localStorage.getItem("JWToken"),
+      },
+    })
+    .then(res=>res.json())
+    .then((res)=>{
+      if(res['error']){
+        // 如果連線失敗，表示未登入
+        setConnected(false);
+        setEmail('尚未登入')
+        return;
+      }
+      // 如果連線成功，就設定 connented, email
+      setConnected(true);
+      setEmail(res['email']);
+      if(!editInfo && res['lastName']){
+        // 如果是 false ，且資料非 null 就取資料然後設定 state
+        setLastName(res['lastName']);
+        setFirstName(res['firstName']);
+        setPhoneNumber(res['phoneNumber']);
+        setAddress(res['address']);
+      };
+    })
+  },[email, editInfo])
   //
   const editInfo__clickHandler=(e)=>{
     e.preventDefault();
-    if(email == '尚未登入') {
+    if(email === '尚未登入') {
       setDisplay(true);
       setMessages(['登入後才可編輯資料']);
       return;
@@ -103,7 +102,8 @@ export default function Main_UserCenter(){
     })
   };
   // 登出會員
-  const logout__clickHandler=()=>{
+  const logout__clickHandler=(e)=>{
+    e.preventDefault();
     let JWToken = localStorage.getItem('JWToken');
     if(!JWToken) {
       setDisplay(true);
@@ -122,28 +122,28 @@ export default function Main_UserCenter(){
           <div className='main_userCenter__FormEmail'>
             <span className='main_userCenter__FormInput'>帳號：{email}</span>
           </div>
-          <Main_UserCenter__Input title='姓氏：' type='text' placeholder='您的姓氏'
+          <MAIN_USERCENTER__INPUT title='姓氏：' type='text' placeholder='您的姓氏'
             value={lastName}
             disabled={editInfo ? "" : "disabled"}
             readyOnly={editInfo ? "readOnly" : ""}
             change={editInfo ? setLastName : onChangeStoper}
             click={input__clickHandler}
             />
-          <Main_UserCenter__Input title='名字：' type='text' placeholder='您的名字'
+          <MAIN_USERCENTER__INPUT title='名字：' type='text' placeholder='您的名字'
             value={firstName}
             disabled={editInfo ? "" : "disabled"}
             readyOnly={editInfo ? "readOnly" : ""}
             change={editInfo ? setFirstName : onChangeStoper}
             click={input__clickHandler}
             />
-          <Main_UserCenter__Input title='手機號碼：' type='text' placeholder='您的手機號碼'
+          <MAIN_USERCENTER__INPUT title='手機號碼：' type='text' placeholder='您的手機號碼'
             value={phoneNumber}
             disabled={editInfo ? "" : "disabled"}
             readyOnly={editInfo ? "readOnly" : ""}
             change={editInfo ? setPhoneNumber : onChangeStoper}
             click={input__clickHandler}
             />
-          <Main_UserCenter__Input title='收件地址：' type='text' placeholder='您的收件地址'
+          <MAIN_USERCENTER__INPUT title='收件地址：' type='text' placeholder='您的收件地址'
             value={address}
             disabled={editInfo ? "" : "disabled"}
             readyOnly={editInfo ? "readOnly" : ""}
@@ -152,7 +152,7 @@ export default function Main_UserCenter(){
             />
           {display && 
           <ul className='main_userCenter__Messages'>
-            {messages.map((message) => <Main_UserCenter__Messages key={message} message={message} />)}
+            {messages.map((message) => <MAIN_USERCENTER__MESSAGES key={message} message={message} />)}
           </ul>
           }
           <button className='main_userCenter__FormSubmit' type='submit'
@@ -161,8 +161,8 @@ export default function Main_UserCenter(){
           </button>
         </form>
         { connected
-          ? <a className='main_userCenter__BoxExternal' onClick={logout__clickHandler}>會員登出</a>
-          : <a className='main_userCenter__BoxExternal' href='/contents/login'>前往登入頁面</a>}
+          ? <a href='###' onClick={logout__clickHandler} className='main_userCenter__BoxExternal'>會員登出</a>
+          : <a href='/contents/login' className='main_userCenter__BoxExternal'>前往登入頁面</a>}
       </div>
     </div>
   )

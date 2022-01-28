@@ -1,12 +1,12 @@
 import React from 'react';
-import Footer__ConnectionBox from './footer__connection';
-import Footer__BottomBox from './footer__bottom';
+import FOOTER__CONNECTION from './footer__connection';
+import FOOTER__BOTTOM from './footer__bottom';
 
-export default function Footer(){
+export default function FOOTER(){
   return (
     <footer className='footer'>
-      <Footer__ConnectionBox/>
-      <Footer__BottomBox/>
+      <FOOTER__CONNECTION/>
+      <FOOTER__BOTTOM/>
     </footer>
   )
 }

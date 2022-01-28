@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 
-export default function Cover() {
+export default function COVER() {
   useEffect(()=>{
     let timer;
     const cover__fadeOut = () => {

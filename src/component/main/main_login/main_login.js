@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-export default function Main_Login() {
+export default function MAIN_LOGIN() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [messages, setMessages] = useState('');
@@ -8,19 +8,19 @@ export default function Main_Login() {
 
   // 與後端連線，判斷是否為登入狀態
   useEffect(()=>{
-      fetch("http://localhost:8081/api/user/connected",{
-      method:"GET",
-        headers:{
-          'Authorization': 'Bearer ' + localStorage.getItem("JWToken"),
-        },
-      })
-      .then(res=>res.json())
-      .then((res)=>{
-        if(res['success']){
-          // 己登入，跳轉到 message__page
-          window.location.replace('/contents/message_page?text=logged')
-        }
-      });
+    fetch("http://localhost:8081/api/user/connected",{
+    method:"GET",
+      headers:{
+        'Authorization': 'Bearer ' + localStorage.getItem("JWToken"),
+      },
+    })
+    .then(res=>res.json())
+    .then((res)=>{
+      if(res['success']){
+        // 己登入，跳轉到 message__page
+        window.location.replace('/contents/message_page?text=logged')
+      }
+    });
   },[])
   const login__clickHandler=(e)=>{
     e.preventDefault();
@@ -33,11 +33,11 @@ export default function Main_Login() {
     .then(res=>res.json())
     .then((res)=>{
       localStorage.setItem("JWToken", res["token"]);
-      if(localStorage.getItem("JWToken") == 'undefined') {
+      if(localStorage.getItem("JWToken") === 'undefined') {
         setError(true);
         setMessages("帳號不存在，或輸入密碼錯誤");
         setPassword('');
-      } else if(localStorage.getItem("JWToken") == 'unverified'){
+      } else if(localStorage.getItem("JWToken") === 'unverified'){
         setError(true);
         setMessages("帳號尚未通過驗證，若末收到驗證信，可點選右下角連結重新發送");
         setPassword('');

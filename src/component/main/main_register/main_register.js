@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import Main_Register__Input from "./main_register__input.js";
-import Main_Register__Messages from "./main_register__messages";
+import MAIN_REGISTER__INPUT from "./main_register__input.js";
+import MAIN_REGISTER__MESSAGES from "./main_register__messages";
 import { validEmail, validPassword } from "../../../config/regex_setting.js";
 
 export default function Main_Register(){
@@ -15,7 +15,7 @@ export default function Main_Register(){
     let errors = [];
     if(!validEmail.test(email)) errors.push('信箱格式錯誤，請輸入有效 email');
     if(!validPassword.test(password)) errors.push('密碼格式錯誤，請輸入8-16位英數字');
-    if(passwordCheck != password) errors.push('確認密碼不相符，請輸入相同密碼');
+    if(passwordCheck !== password) errors.push('確認密碼不相符，請輸入相同密碼');
     setMessages(errors);
     if(errors.length){
       setDisplay(true);
@@ -46,21 +46,21 @@ export default function Main_Register(){
       <div className="main_register__Box">
         <div className='main_register__BoxTitle'>註冊會員</div>
         <form className='main_register__BoxForm' method='post'>
-          <Main_Register__Input title='電子郵件' type='email' placeholder='請輸入您的e-mail'
+          <MAIN_REGISTER__INPUT title='電子郵件' type='email' placeholder='請輸入您的e-mail'
             value={email}
             change={setEmail}
             />
-          <Main_Register__Input title='密碼' type='password' placeholder='8-16英數字，大小寫不同'
+          <MAIN_REGISTER__INPUT title='密碼' type='password' placeholder='8-16英數字，大小寫不同'
             value={password}
             change={setPassword}
             />
-          <Main_Register__Input title='確認密碼' type='password' placeholder='再次輸入密碼'
+          <MAIN_REGISTER__INPUT title='確認密碼' type='password' placeholder='再次輸入密碼'
             value={passwordCheck}
             change={setPasswordCheck}
             />
           {display && 
           <ul className='main_register__Messages'>
-            {messages.map((message) => <Main_Register__Messages key={message} message={message} />)}
+            {messages.map((message) => <MAIN_REGISTER__MESSAGES key={message} message={message} />)}
           </ul>
           }
           <button className='main_register__FormSubmit' type='submit'

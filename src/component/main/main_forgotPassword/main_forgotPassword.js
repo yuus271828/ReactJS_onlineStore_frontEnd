@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import Main_ForgotPassword__Input from "./main_forgotPassword__input.js";
-import Main_ForgotPassword__Messages from "./main_forgotPassword__messages";
+import MAIN_FORGOTPASSWORD__INPUT from "./main_forgotPassword__input.js";
+import MAIN_FORGOTPASSWORD__MESSAGES from "./main_forgotPassword__messages";
 import { validPassword } from "../../../config/regex_setting.js";
 
-export default function Main_ForgotPassword(){
+export default function MAIN_FORGOTPASSWORD(){
   const [password, setPassword] = useState('');
   const [passwordCheck, setPasswordCheck] = useState('');
   const [messages, setMessages] = useState([]);
@@ -13,7 +13,7 @@ export default function Main_ForgotPassword(){
     e.preventDefault();
     let errors = [];
     if(!validPassword.test(password)) errors.push('密碼格式錯誤，請輸入8-16位英數字');
-    if(passwordCheck != password) errors.push('確認密碼不相符，請輸入相同密碼');
+    if(passwordCheck !== password) errors.push('確認密碼不相符，請輸入相同密碼');
     setMessages(errors);
     if(errors.length){
       setDisplay(true);
@@ -23,7 +23,7 @@ export default function Main_ForgotPassword(){
     }
   };
   const forgotPassword__sendRequest=()=>{
-    const url = new URL(location.href);
+    const url = new URL(window.location.href);
     const token = url.searchParams.get('token');
     const account={password};
     fetch("http://localhost:8081/api/acct/forgot?token="+token,{
@@ -46,17 +46,17 @@ export default function Main_ForgotPassword(){
       <div className="main_forgotPassword__Box">
         <div className='main_forgotPassword__BoxTitle'>重設密碼</div>
         <form className='main_forgotPassword__BoxForm' method='post'>
-          <Main_ForgotPassword__Input title='新密碼' type='password' placeholder='8-16英數字，大小寫不同'
+          <MAIN_FORGOTPASSWORD__INPUT title='新密碼' type='password' placeholder='8-16英數字，大小寫不同'
             value={password}
             change={setPassword}
             />
-          <Main_ForgotPassword__Input title='密碼確認' type='password' placeholder='請再次輸入您的新密碼'
+          <MAIN_FORGOTPASSWORD__INPUT title='密碼確認' type='password' placeholder='請再次輸入您的新密碼'
             value={passwordCheck}
             change={setPasswordCheck}
             />
           {display && 
           <ul className='main_forgotPassword__Messages'>
-            {messages.map((message) => <Main_ForgotPassword__Messages key={message} message={message} />)}
+            {messages.map((message) => <MAIN_FORGOTPASSWORD__MESSAGES key={message} message={message} />)}
           </ul>
           }
           <button className='main_forgotPassword__FormSubmit' type='submit'

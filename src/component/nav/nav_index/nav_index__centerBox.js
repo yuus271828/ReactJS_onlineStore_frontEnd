@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function Nav_Index__centerBox(props){
+export default function NAV_INDEX__CENTERBOX(props){
   return (
     <div className='nav_index__centerBox'>
       <a className='nav_index__centerBoxLink' href={props.href[0]} title={props.name[0]} >{props.name[0]}</a>

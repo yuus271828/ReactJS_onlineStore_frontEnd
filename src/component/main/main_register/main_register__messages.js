@@ -1,5 +1,5 @@
 import React from "react";
 
-export default function Main_Register__Messages(props) {
+export default function MAIN_REGISTER__MESSAGES(props) {
   return <li>{props.message}</li>;
 }

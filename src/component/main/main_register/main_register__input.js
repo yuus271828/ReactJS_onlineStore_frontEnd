@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Main_Register__Input(props){
+export default function MAIN_REGISTER__INPUT(props){
   return(
     <div className='main_register__Form'>
       <div className='main_register__FormTitle'>{props.title}</div>

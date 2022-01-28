@@ -1,9 +1,9 @@
 import React from 'react';
 
-export default function Nav__asideBox(props){
+export default function NAV__ASIDEBOX(props){
   return (
     <div id='nav__menu' className='nav__asideBox nav__asideBox--color'>
-      <a onClick={(e) => props.click(e)} className='nav__asideBoxLink nav__asideBoxLink--close'><span>X</span>CLOSE</a>
+      <a onClick={(e) => props.click(e)} className='nav__asideBoxLink nav__asideBoxLink--close' href='###'><span>X</span>CLOSE</a>
       <a className='nav__asideBoxLink' href={props.href[0]}>{props.name[0]}</a>
       <a className='nav__asideBoxLink' href={props.href[1]}>{props.name[1]}</a>
       <a className='nav__asideBoxLink' href={props.href[2]}>{props.name[2]}</a>
