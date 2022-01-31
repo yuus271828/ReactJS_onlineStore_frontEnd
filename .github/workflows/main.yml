@@ -34,6 +34,7 @@ jobs:
           application_name: ReactJS_onlineStore_frontEnd
           enviroment_name: Reactjsonlinestorefrontend-env
           version_label: "the-simple-engineer-deployment-${{ steps.format-time.outputs.time }}"
+          use_existing_version_if_available: true
           region: ap-northeast-3
           deployment_package: deploy.zip
         
