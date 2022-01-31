@@ -33,7 +33,6 @@ jobs:
           aws_secret_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           application_name: ReactJS_onlineStore_frontEnd
           enviroment_name: Reactjsonlinestorefrontend-env-1
-          version_label: "ReactJS_onlineStore_frontEnd-deployment"
-          use_existing_version_if_available: true
+          version_label: "ReactJS_onlineStore_frontEnd-deployment-xxxxx"
           region: ap-northeast-3
           deployment_package: deploy.zip
