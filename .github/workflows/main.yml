@@ -31,8 +31,8 @@ jobs:
         with:
           aws_access_key: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws_secret_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          application_name: beanstalk-engineer-v2
-          enviroment_name: BeanstalkEngineerV2-env
+          application_name: ReactJS_onlineStore_frontEnd
+          enviroment_name: Reactjsonlinestorefrontend-env
           version_label: "the-simple-engineer-deployment-${{ steps.format-time.outputs.time }}"
           region: ap-northeast-3
           deployment_package: deploy.zip
