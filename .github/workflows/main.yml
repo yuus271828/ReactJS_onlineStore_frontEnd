@@ -5,7 +5,7 @@ on:
       - master
 jobs:
   deploy:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout Latest Repo
         uses: actions/checkout@master
@@ -34,7 +34,7 @@ jobs:
           application_name: beanstalk-engineer-v2
           enviroment_name: BeanstalkEngineerV2-env
           version_label: "the-simple-engineer-deployment-${{ steps.format-time.outputs.time }}"
-          region: us-east-2
+          region: ap-northeast-3
           deployment_package: deploy.zip
         
         
