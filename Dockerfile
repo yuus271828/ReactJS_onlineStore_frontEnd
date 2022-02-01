@@ -1,7 +1,7 @@
 # 引入一個(己完成的) basic image(映像)
 # 可以在 basic image 注入自己的 src code，在其之上建構 image
 # as 用來區分執行的階段，as build 表示為 docker 創建中的 build 階段
-FROM node:16.13.2-buster as build
+FROM node:16.13.2-alpine AS build
 
 # 建立 Docker 工作目錄
 WORKDIR /workdir
@@ -38,7 +38,7 @@ RUN npm run build
 # docker run --rm -it --name web -p 3000:3000 -v %cd%:/workdir react-docker:1.0.0-dev
 
 # NGINX Web Server
-FROM nginx:1.20.2-alpine as prod
+FROM nginx:1.20.2-alpine AS prod
 
 # 把簽名資料包入 Docker 中，可用 Docker inspect 查看
 LABEL \

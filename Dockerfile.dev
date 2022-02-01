@@ -1,0 +1,12 @@
+FROM node:16.13.2-alpine AS test
+
+WORKDIR /workdir
+
+COPY package.json .
+COPY package-lock.json .
+
+RUN npm ci --production
+
+COPY . .
+
+CMD ["npm", "run", "test"]
