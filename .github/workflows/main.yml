@@ -64,35 +64,38 @@ jobs:
           cache-from: type=registry,ref=${{ secrets.DOCKER_HUB_USERNAME }}/reactjs_onilnestore_forntend:buildcache
           cache-to: type=registry,ref=${{ secrets.DOCKER_HUB_USERNAME }}/reactjs_onilnestore_forntend:buildcache,mode=max
 
-#12  # Deploy to AWS Elastic Beanstalk
-#12  deploy:
-#12    needs: [check]
-#12    if: needs.check.outputs.status == 'success'
-#12    runs-on: ubuntu-latest
-#12    steps:
-#12      - 
-#12      # actions/checkout@v2 checks-out repository under $GITHUB_WORKSPACE, allow workflow access it.
-#12      # 許可 github 去訪問這個 repository
-#12        name: Checkout Latest Repo
-#12        uses: actions/checkout@v2
-#12      - 
-#12      # 打包壓縮成 zip 檔
-#12        name: Generate Deployment Package
-#12        run: zip -r deploy.zip * -x "**node_modules**"
-#12      - 
-#12      # 取得當前時間
-#12        id: current-time
-#12        name: Get timestamp
-#12        uses: gerred/actions/current-time@master
-#12      - 
-#12      # einaregilsson/beanstalk-deploy@v20 自動部署到 AWS Elastic Beanstalk
-#12        name: Deploy to EB
-#12        uses: einaregilsson/beanstalk-deploy@v20
-#12        with:
-#12          aws_access_key: ${{ secrets.AWS_ACCESS_KEY_ID }}
-#12          aws_secret_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-#12          application_name: ReactJS_onlineStore_frontEnd
-#12          environment_name: Reactjsonlinestorefrontend-env
-#12          version_label: "ReactJS_onlineStore_frontEnd-deployment-${{ steps.current-time.outputs.time }}"
-#12          region: ap-northeast-1
-#12          deployment_package: deploy.zip
+  # Deploy to AWS Elastic Beanstalk
+  deploy:
+    needs: [check]
+    if: needs.check.outputs.status == 'success'
+    runs-on: ubuntu-latest
+    steps:
+      - 
+        name: Checkout Latest Repo
+        uses: actions/checkout@v2
+      - 
+      # actions/checkout@v2 checks-out repository under $GITHUB_WORKSPACE, allow workflow access it.
+      # 許可 github 去訪問這個 repository
+        name: Checkout Latest Repo
+        uses: actions/checkout@v2
+      - 
+      # 打包壓縮成 zip 檔
+        name: Generate Deployment Package
+        run: zip -r deploy.zip * -x "**node_modules**"
+      - 
+      # 取得當前時間
+        id: current-time
+        name: Get timestamp
+        uses: gerred/actions/current-time@master
+      - 
+      # einaregilsson/beanstalk-deploy@v20 自動部署到 AWS Elastic Beanstalk
+        name: Deploy to EB
+        uses: einaregilsson/beanstalk-deploy@v20
+        with:
+          aws_access_key: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws_secret_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          application_name: ReactJS_onlineStore_frontEnd
+          environment_name: Reactjsonlinestorefrontend-env
+          version_label: "ReactJS_onlineStore_frontEnd-deployment-${{ steps.current-time.outputs.time }}"
+          region: ap-northeast-1
+          deployment_package: deploy.zip
