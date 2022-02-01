@@ -26,7 +26,7 @@ jobs:
           docker run -e CI=true ${{ secrets.DOCKER_HUB_USERNAME }}/reactjs_onilnestore_forntend-test
 
   # Build and push to Docker Hub
-  build and push:
+  push:
     needs: [check]
     if: needs.check.outputs.status == 'success'
     runs-on: ubuntu-latest
