@@ -28,7 +28,7 @@ jobs:
           aws_access_key: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws_secret_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           application_name: ReactJS_onlineStore_frontEnd
-          environment_name: Reactjsonlinestorefrontend-env
+          environment_name: Reactjsonlinestorefrontend-docker-env
           version_label: "ReactJS_onlineStore_frontEnd-deployment-${{ steps.current-time.outputs.time }}"
           region: ap-northeast-3
           deployment_package: deploy.zip
