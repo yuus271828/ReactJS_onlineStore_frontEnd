@@ -15,7 +15,6 @@ jobs:
         name: Checkout Latest Repo
         uses: actions/checkout@v2
       - 
-      # 測試 Docker images
         id: test
         name: Build and testing Docker images
         run: |
