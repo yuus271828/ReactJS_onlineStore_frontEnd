@@ -31,6 +31,9 @@ jobs:
     if: needs.check.outputs.status == 'success'
     runs-on: ubuntu-latest
     steps:
+      - 
+        name: Checkout Latest Repo
+        uses: actions/checkout@v2
       -
       # install QEMU static binaries(靜態二進制文件)
       # QEMU is a generic and open source machine & userspace emulator and virtualizer.
