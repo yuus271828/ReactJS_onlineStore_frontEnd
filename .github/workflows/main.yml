@@ -15,13 +15,14 @@ jobs:
         name: Checkout Latest Repo
         uses: actions/checkout@v2
       - 
+      # 測試 Docker images
         id: test
         name: Build and testing Docker images
+        # 設定 -e CI=true 可以讓 test 只運行一次就退出
         run: |
           echo "Build docker images for testing..."
           docker build -t ${{ secrets.DOCKER_HUB_USERNAME }}/reactjs_onilnestore_forntend-test -f ./Dockerfile.dev .
           echo "Run react tests with built Docker images..."
-        # 設定 -e CI=true 可以讓 test 只運行一次就退出
           docker run -e CI=true ${{ secrets.DOCKER_HUB_USERNAME }}/reactjs_onilnestore_forntend-test
 
   # Build and push to Docker Hub
