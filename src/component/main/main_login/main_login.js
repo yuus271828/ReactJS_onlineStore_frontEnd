@@ -25,7 +25,7 @@ export default function MAIN_LOGIN() {
   const login__clickHandler=(e)=>{
     e.preventDefault();
     const account={email, password};
-    fetch("http://localhost:8081/api/auth/login",{
+    fetch("http://192.168.100.101:8081/api/auth/login",{
       method:"POST",
       headers:{"Content-Type": "application/json"},
       body: JSON.stringify(account)
