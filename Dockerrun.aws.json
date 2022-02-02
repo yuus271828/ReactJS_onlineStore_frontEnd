@@ -1,0 +1,18 @@
+{
+  "AWSEBDockerrunVersion": "3",
+  "containerDefinitions": [
+    {
+      "name": "ReactJS_onlineStore_frontEnd",
+      "image": "ohiji_frontend/reactjs-onlinestore-frontend",
+      "hostname": "ohiji",
+      "essential": true,
+      "memory": 300,
+      "portMappings": [
+        {
+          "hostPort": 80,
+          "containerPort": 80
+        }
+      ]
+    }
+  ]
+}
