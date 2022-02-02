@@ -71,9 +71,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - 
-        name: Checkout Latest Repo
-        uses: actions/checkout@v2
-      - 
       # actions/checkout@v2 checks-out repository under $GITHUB_WORKSPACE, allow workflow access it.
       # 許可 github 去訪問這個 repository
         name: Checkout Latest Repo
