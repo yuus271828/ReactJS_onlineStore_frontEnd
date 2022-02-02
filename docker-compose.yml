@@ -1,9 +1,7 @@
 version: '3'
 services:
   deployment-prod:
-    build:
-      context: .
-      dockerfile: Dockerfile
+    image: yuus271828/reactjs_onilnestore_forntend
     ports:
       - '80:80'
 
