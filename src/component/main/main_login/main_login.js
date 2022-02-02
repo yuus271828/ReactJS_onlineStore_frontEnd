@@ -8,7 +8,7 @@ export default function MAIN_LOGIN() {
 
   // 與後端連線，判斷是否為登入狀態
   useEffect(()=>{
-    fetch("http://localhost:8081/api/user/connected",{
+    fetch("http://192.168.100.101:8081/api/user/connected",{
     method:"GET",
       headers:{
         'Authorization': 'Bearer ' + localStorage.getItem("JWToken"),
