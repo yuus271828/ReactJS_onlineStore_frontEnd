@@ -1,4 +1,4 @@
-name: Deployment to AWS & Push to Docker Hub
+name: Push Image to Docker Hub & Deploy to AWS
 on:
   push:
     branches:
@@ -26,7 +26,7 @@ jobs:
           docker run -e CI=true ${{ secrets.DOCKER_HUB_USERNAME }}/reactjs_onilnestore_forntend-test
 
   # Build and push to Docker Hub
-  push_to_docker_hub:
+  push_image_to_docker_hub:
     needs: [check]
     if: needs.check.outputs.status == 'success'
     outputs:
@@ -97,5 +97,5 @@ jobs:
           application_name: ReactJS_onlineStore_frontEnd
           environment_name: Reactjsonlinestorefrontend-env
           version_label: "ReactJS_onlineStore_frontEnd-deployment-${{ steps.current-time.outputs.time }}"
-          region: ap-northeast-1
+          region: ${{ secrets.AWS_REGION }}
           deployment_package: deploy.zip
