@@ -69,8 +69,8 @@ jobs:
 
   # Deploy to AWS Elastic Beanstalk
   deploy_to_aws:
-    needs: [push_to_docker_hub]
-    if: needs.push_to_docker_hub.outputs.status == 'success'
+    needs: [push_image_to_docker_hub]
+    if: needs.push_image_to_docker_hub.outputs.status == 'success'
     runs-on: ubuntu-latest
     steps:
       - 
