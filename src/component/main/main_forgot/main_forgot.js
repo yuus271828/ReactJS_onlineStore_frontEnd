@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import MAIN_FORGOT__INPUT from "./main_forgot__input.js";
 import MAIN_FORGOT__MESSAGES from "./main_forgot__messages.js";
 import { validEmail } from "../../../config/regex_setting.js";
+import { API_HOSTNAME } from "../../../config/env_setting.js";
 
 export default function MAIN_FORGOT(){
   const [email, setEmail] = useState('');
@@ -22,7 +23,7 @@ export default function MAIN_FORGOT(){
   };
   const forgot__sendRequest=()=>{
     const account={email};
-    fetch("http://localhost:8081/api/email/sendForgot",{
+    fetch(API_HOSTNAME+"/api/email/sendForgot",{
       method:"POST",
       headers:{"Content-Type": "application/json"},
       body: JSON.stringify(account)

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import MAIN_RESEND__INPUT from "./main_resend__input.js";
 import MAIN_RESEND__MESSAGES from "./main_resend__messages";
 import { validEmail } from "../../../config/regex_setting.js";
+import { API_HOSTNAME } from "../../../config/env_setting.js";
 
 export default function Main_Resend(){
   const [email, setEmail] = useState('');
@@ -22,7 +23,7 @@ export default function Main_Resend(){
   };
   const resend__sendRequest=()=>{
     const account={email};
-    fetch("http://localhost:8081/api/email/resend",{
+    fetch(API_HOSTNAME+"/api/email/resend",{
       method:"POST",
       headers:{"Content-Type": "application/json"},
       body: JSON.stringify(account)

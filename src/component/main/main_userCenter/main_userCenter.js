@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import MAIN_USERCENTER__INPUT from "./main_userCenter__input.js";
 import MAIN_USERCENTER__MESSAGES from "./main_userCenter__messages";
 import { validName, validPhoneNumber, validAddress } from "../../../config/regex_setting.js";
+import { API_HOSTNAME } from "../../../config/env_setting.js";
 
 export default function Main_UserCenter(){
   // editInfo 代表是否可編輯，控制input與button
@@ -19,7 +20,7 @@ export default function Main_UserCenter(){
 
   // 與後端連線，獲取 user 資料，判斷是否為登入狀態
   useEffect(()=>{ 
-    fetch("http://localhost:8081/api/user/getUserInfo",{
+    fetch(API_HOSTNAME+"/api/user/getUserInfo",{
       method:"GET",
       headers:{
         'Authorization': 'Bearer ' + localStorage.getItem("JWToken"),
@@ -83,7 +84,7 @@ export default function Main_UserCenter(){
   // 送出更新資料的 request
   const updateUserInfo=()=>{
     const userInfo={lastName, firstName, phoneNumber, address};
-    fetch("http://localhost:8081/api/user/updateUserInfo",{
+    fetch(API_HOSTNAME+"/api/user/updateUserInfo",{
       method:"PUT",
       headers:{
         'Authorization': 'Bearer ' + localStorage.getItem("JWToken"),

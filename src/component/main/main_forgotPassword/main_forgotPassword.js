@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import MAIN_FORGOTPASSWORD__INPUT from "./main_forgotPassword__input.js";
 import MAIN_FORGOTPASSWORD__MESSAGES from "./main_forgotPassword__messages";
 import { validPassword } from "../../../config/regex_setting.js";
+import { API_HOSTNAME } from "../../../config/env_setting.js";
 
 export default function MAIN_FORGOTPASSWORD(){
   const [password, setPassword] = useState('');
@@ -26,7 +27,7 @@ export default function MAIN_FORGOTPASSWORD(){
     const url = new URL(window.location.href);
     const token = url.searchParams.get('token');
     const account={password};
-    fetch("http://localhost:8081/api/acct/forgot?token="+token,{
+    fetch(API_HOSTNAME+"/api/acct/forgot?token="+token,{
       method:"PUT",
       headers:{"Content-Type": "application/json"},
       body: JSON.stringify(account)

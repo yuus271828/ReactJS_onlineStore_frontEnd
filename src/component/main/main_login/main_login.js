@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { API_HOSTNAME } from "../../../config/env_setting";
 
 export default function MAIN_LOGIN() {
   const [email, setEmail] = useState('');
@@ -8,7 +9,7 @@ export default function MAIN_LOGIN() {
 
   // 與後端連線，判斷是否為登入狀態
   useEffect(()=>{
-    fetch("http://192.168.100.101:8081/api/user/connected",{
+    fetch(API_HOSTNAME+"/api/user/connected",{
     method:"GET",
       headers:{
         'Authorization': 'Bearer ' + localStorage.getItem("JWToken"),
@@ -25,7 +26,7 @@ export default function MAIN_LOGIN() {
   const login__clickHandler=(e)=>{
     e.preventDefault();
     const account={email, password};
-    fetch("http://192.168.100.101:8081/api/auth/login",{
+    fetch(API_HOSTNAME+"/api/auth/login",{
       method:"POST",
       headers:{"Content-Type": "application/json"},
       body: JSON.stringify(account)

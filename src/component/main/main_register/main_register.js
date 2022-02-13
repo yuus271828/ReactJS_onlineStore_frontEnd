@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import MAIN_REGISTER__INPUT from "./main_register__input.js";
 import MAIN_REGISTER__MESSAGES from "./main_register__messages";
 import { validEmail, validPassword } from "../../../config/regex_setting.js";
+import { API_HOSTNAME } from "../../../config/env_setting.js";
 
 export default function Main_Register(){
   const [email, setEmail] = useState('');
@@ -26,7 +27,7 @@ export default function Main_Register(){
   };
   const register__sendRequest=()=>{
     const account={email, password};
-    fetch("http://localhost:8081/api/acct/register",{
+    fetch(API_HOSTNAME+"/api/acct/register",{
       method:"POST",
       headers:{"Content-Type": "application/json"},
       body: JSON.stringify(account)
