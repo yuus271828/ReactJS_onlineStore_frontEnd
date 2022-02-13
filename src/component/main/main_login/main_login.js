@@ -40,7 +40,7 @@ export default function MAIN_LOGIN() {
         setPassword('');
       } else if(localStorage.getItem("JWToken") === 'unverified'){
         setError(true);
-        setMessages("帳號尚未通過驗證，若末收到驗證信，可點選右下角連結重新發送");
+        setMessages("帳號尚未通過驗證");
         setPassword('');
       }else {
         setError(false);
