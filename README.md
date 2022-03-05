@@ -16,7 +16,7 @@
 
 ## How to use
 
-商品展示欄
+**商品展示欄**
 
 <p align="center">
   <img  src="readme_img\homepage_salebox.jpg" width="70%" alt="商品展示欄">
