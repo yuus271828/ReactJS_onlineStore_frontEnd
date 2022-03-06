@@ -19,7 +19,7 @@
 **商品展示欄**
 
 <p align="center">
-  <img  src="readme_img\homepage_salebox.jpg" width="70%" alt="商品展示欄">
+  <img  src="readme_img\homepage_salebox.jpg" width="80%" alt="商品展示欄">
 <p>
 
 功能說明：
