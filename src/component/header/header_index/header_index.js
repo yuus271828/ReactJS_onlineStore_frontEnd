@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 
 export default function HEADER_INDEX() {
+  // 標題淡入效果
   useEffect(()=>{
     let timer;
     const headerText__fadeIn = () => {

@@ -11,6 +11,7 @@ export default function Main_Register(){
   const [messages, setMessages] = useState([]);
   const [display, setDisplay] = useState(false);
 
+  // 檢查 input 是否符合格式
   const register__clickHandler=(e)=>{
     e.preventDefault();
     let errors = [];
@@ -25,6 +26,7 @@ export default function Main_Register(){
       register__sendRequest();
     }
   };
+  // 發送 request 給後端 API
   const register__sendRequest=()=>{
     const account={email, password};
     fetch(API_HOSTNAME+"/api/acct/register",{

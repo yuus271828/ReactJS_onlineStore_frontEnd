@@ -10,6 +10,7 @@ export default function MAIN_FORGOTPASSWORD(){
   const [messages, setMessages] = useState([]);
   const [display, setDisplay] = useState(false);
 
+  // 檢查 input 是否符合格式
   const forgotPassword__clickHandler=(e)=>{
     e.preventDefault();
     let errors = [];
@@ -23,6 +24,7 @@ export default function MAIN_FORGOTPASSWORD(){
       forgotPassword__sendRequest();
     }
   };
+  // 發送 request 給後端 API
   const forgotPassword__sendRequest=()=>{
     const url = new URL(window.location.href);
     const token = url.searchParams.get('token');

@@ -9,6 +9,7 @@ export default function MAIN_FORGOT(){
   const [messages, setMessages] = useState([]);
   const [display, setDisplay] = useState(false);
   
+  // 檢查 input 是否符合格式
   const forgot__clickHandler=(e)=>{
     e.preventDefault();
     let errors = [];
@@ -21,6 +22,7 @@ export default function MAIN_FORGOT(){
       forgot__sendRequest();
     }
   };
+  // 發送 request 給後端 API
   const forgot__sendRequest=()=>{
     const account={email};
     fetch(API_HOSTNAME+"/api/email/sendForgot",{

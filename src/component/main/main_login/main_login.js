@@ -23,6 +23,8 @@ export default function MAIN_LOGIN() {
       }
     });
   },[])
+  
+  // 檢查 input 是否符合格式
   const login__clickHandler=(e)=>{
     e.preventDefault();
     const account={email, password};

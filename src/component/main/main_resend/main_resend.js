@@ -9,6 +9,7 @@ export default function Main_Resend(){
   const [messages, setMessages] = useState([]);
   const [display, setDisplay] = useState(false);
   
+  // 檢查 input 是否符合格式
   const resend__clickHandler=(e)=>{
     e.preventDefault();
     let errors = [];
@@ -21,6 +22,7 @@ export default function Main_Resend(){
       resend__sendRequest();
     }
   };
+  // 發送 request 給後端 API
   const resend__sendRequest=()=>{
     const account={email};
     fetch(API_HOSTNAME+"/api/email/resend",{

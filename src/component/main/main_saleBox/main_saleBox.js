@@ -9,6 +9,7 @@ export default function MAIN_SALEBOX() {
   const products = document.getElementsByClassName('main_saleBox__product');
   const maxSteps = products.length - container__maximum;
 
+  // 檢查視窗寬度，設定最大欄位數。並監視視窗寬度變化事件，在變化時，重置欄位位置。
   useEffect(()=>{
     const products = document.getElementsByClassName('main_saleBox__product');
     const resize__eventHandler = () => {
@@ -27,8 +28,7 @@ export default function MAIN_SALEBOX() {
     return () => window.removeEventListener('resize', resize__eventHandler);
   },[windowX])
 
-  
-
+  // 點擊觸發欄位移動
   const arrow__clickHandler = (e) => {
     e.preventDefault();
     // 左箭頭

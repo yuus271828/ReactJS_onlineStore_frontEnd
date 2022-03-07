@@ -1,7 +1,12 @@
+## 引用 Docker Hub 上的 image 來建構容器
+# 第三版可使用 docker-compose
 version: '3'
 services:
   deployment-prod:
+    # 引用 Docker Hub 上的容器
     image: yuus271828/reactjs_onilnestore_forntend
+    # 80 為 AWS 預設監聽的 ports
+    # 80(host的ports):80(容器的ports)，表示把 host 的 ports 映射到容器的 ports
     ports:
       - '80:80'
 

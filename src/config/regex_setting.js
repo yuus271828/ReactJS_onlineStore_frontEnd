@@ -1,4 +1,4 @@
-
+// Regular Expression 設定
 export const validEmail = new RegExp(
   /* 
     開頭為大小寫英數字，

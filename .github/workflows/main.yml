@@ -8,6 +8,7 @@ jobs:
   check:
     outputs:
       status: ${{ steps.test.conclusion }}
+    # ubuntu 為 linux 系統
     runs-on: ubuntu-latest
     steps:
       - 

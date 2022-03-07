@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 
 export default function COVER() {
+  // Cover 淡出效果
   useEffect(()=>{
     let timer;
     const cover__fadeOut = () => {

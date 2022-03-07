@@ -6,6 +6,7 @@ import NAV_INDEX__CENTERBOX from './nav_index__centerBox.js';
 export default function NAV_INDEX() {
   const [scrollTop, setScrollTop] = useState(0);
   
+  // 滾輪最高點時，有特殊 css 效果
   useEffect(()=>{
     let nav = document.getElementsByTagName('nav')[0];
     const nav__scrollHandler = (e) => {
@@ -17,6 +18,7 @@ export default function NAV_INDEX() {
     return () => window.removeEventListener('scroll', nav__scrollHandler)
   },[scrollTop])
 
+  // 點擊觸發 nav 移入
   const asideBox__clickHandler = (e) => {
     e.preventDefault();
     let start = Date.now();

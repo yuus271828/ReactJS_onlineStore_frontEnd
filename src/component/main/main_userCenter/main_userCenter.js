@@ -46,7 +46,8 @@ export default function Main_UserCenter(){
       };
     })
   },[email, editInfo])
-  //
+  
+  // 點擊啟用編輯模式。點擊第二次可檢查 input 是否符合格式，並保存資料。
   const editInfo__clickHandler=(e)=>{
     e.preventDefault();
     if(email === '尚未登入') {

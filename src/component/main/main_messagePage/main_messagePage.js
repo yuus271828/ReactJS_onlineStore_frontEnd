@@ -4,6 +4,7 @@ export default function MAIN_MESSAGEPAGE(){
   const [message, setMessage] = useState('');
   const [link, setLink] = useState(true);
 
+  // 將 url 參數轉換成訊息
   useEffect(()=>{
     const url = new URL(window.location.href);
     const text = url.searchParams.get('text');
