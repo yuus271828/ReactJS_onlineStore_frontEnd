@@ -6,7 +6,7 @@
 <p align="center">
   <img src="readme_img\homepage.jpg" height="256" alt="首頁">
   <p align="center" style="font-size:30px">
-    <a href="http://reactjsonlinestorefrontend-env.eba-3pthpit7.ap-northeast-1.elasticbeanstalk.com/">Demo</a>
+    <a href="http://reactjsonlinestorefrontend-env.eba-3pthpit7.ap-northeast-1.elasticbeanstalk.com/">網站入口</a>
   </p>
 <p>
 
