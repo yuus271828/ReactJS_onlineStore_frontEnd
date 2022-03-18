@@ -12,7 +12,7 @@
 
 ## Description
 
-烏魚子網站，提供會員註冊、信箱驗證、登入登出、編輯會員資料、重設密碼等服務。
+烏魚子網站的前端專案。語言為 JavaScript，框架為 ReactJS，透過 GitHub Actions 以 Docker 容器部署在 AWS 上。
 
 ## How to use
 
