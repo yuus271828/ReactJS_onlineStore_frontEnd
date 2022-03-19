@@ -14,6 +14,16 @@
 
 烏魚子網站的前端專案。語言為 JavaScript，框架為 ReactJS，透過 GitHub Actions 以 Docker 容器部署在 AWS 上。
 
+**Frame Diagram**
+<p align="center">
+  <img  src="readme_img\frame_diagram.png" width="80%" alt="frame_diagram">
+<p>
+
+**Deployment Flowchart**
+<p align="center">
+  <img  src="readme_img\deployment_flowchart.png" width="80%" alt="deployment_flowchart">
+<p>
+
 ## How to use
 
 **商品展示欄**
